@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.print.css">
+
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <script src="/static/js/calendar.js"></script>
+
+  <script src="jquery-3.2.1.min.js"></script>
+  
+  <script>
+      $(document).ready(function(){
+        $("#list").click(function(){
+            $('#calendar').fullCalendar('changeView', 'listMonth');
+          });
+        $("#day").click(function(){
+            $('#calendar').fullCalendar('changeView', 'agendaDay');
+          });
+        $("#week").click(function(){
+            $('#calendar').fullCalendar('changeView', 'agendaWeek');
+          });  
+        $("#month").click(function(){
+            $('#calendar').fullCalendar('changeView', 'month');
+          });
+          
+      });
+      </script>
+
+<script>
+  $('#myModal').modal(options)
+  $('#myModal').modal('show')
+</script>
+
+</head>
+<body>
+
+  {% extends "base.html" %}
+  {% block title %}Home{% endblock %}
+  {% block body %}
+  <div class="jumbotron">
+    <h1>My Dashboard</h1>
+  </div>
+
+
+<div></div>
+<div></div>
+
+<div class="alert alert-info">
+    <strong>New Message!</strong> Pharmacy has received your new prescription from Dr. Cowboy.
+  </div>
+
+<div class="container">
+  <div class="row" id="outer-row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Patient's name</div>
+        <div class="panel-body">
+          <img id="profile-image" src="http://pronksiapartments.ee/wp-content/uploads/2015/10/placeholder-face-big.png" alt="Face Image Not Loaded"
+            style="width:150px;height:150px;">
+          <button type="button" class="btn btn-primary">My Messages</button>
+          <p></p>
+          <p>Cellphone number: 201-111-2222</p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <h3>Doctors</h3>
+        <p id="providerlists">List of doctors</p>
+        <h3>Pharmacies</h3>
+        <p id="providerlists">List of pharmacies</p>
+        <h3>Insurance Plan</h3>
+        <p id="providerlists">List of insurance</p>
+      
+      </div>
+    </div>
+    <div class="col-12 col-md-8" style="background-color:lavender;" >
+      <h3>Prescription Refill Request Form</h3>
+      <p>Patient is requesting refill for <B>Levothyroxine</B></p>  
+      <form>
+          <div class="form-group">
+              <label for="sel1">Choose your pharmacy:</label>
+              <select class="form-control" id="sel1">
+                <option>Walgreens</option>
+                <option>CVS</option>
+                <option>RiteAid</option>
+                <option>Arpit's Pharmacy</option>
+              </select>
+            </div>    
+<br>
+            <div class="form-group">
+              <label for="pwd">Additional notes:</label>
+              <input type="password" class="form-control" id="pwd">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+      </div>
+    </div>
+
+  </div>
+
+    
+
+
+  </div>
+</div>
+
+
+</body>
+</html>
+{% endblock %}
